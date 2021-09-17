@@ -4,7 +4,7 @@
 
     </div>
     <div class="card-body">
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="tabla">
     <thead>
         <tr>
             <th>ID</th>
@@ -40,3 +40,20 @@
     </div>
    
 </div>
+
+<script>
+
+    var tabla = document.querySelector("#tabla");
+    var dataTable = new DataTable(tabla,{
+    
+        perPage:3,
+        perPageSelect:[3,5,10],
+        labels: {
+    placeholder: "Buscar Registros...",
+    perPage: "Ver {select} registros por pagina",
+    noRows: "Registro no encontrado",
+    info: "Mostrando registros del {start} al {end} de {rows} registros (Pagina {page} de {pages} paginas)",
+},
+        
+    });
+</script>

@@ -1,6 +1,6 @@
 <?php 
 
-$controller = 'page';
+$controller = 'user';
 $action = 'view';
 
 if(isset($_GET['controller']) && isset($_GET['action'])){
